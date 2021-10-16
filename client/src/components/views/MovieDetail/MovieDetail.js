@@ -23,8 +23,8 @@ function MovieDetail(props) {
         fetch(endpoint)
         .then(response => response.json())
         .then(response => {
+            console.log(response)
             setmovieInfo(response);
-            console.log(response);
         })
 
         let endpointcast = `${API_URL}movie/${movieID}/credits?api_key=${API_KEY}`
@@ -33,7 +33,6 @@ function MovieDetail(props) {
         .then(response => response.json())
         .then(response => {
             setmovieCredit([...response.cast, ...response.crew]);
-            console.log(response)
         })
      
 

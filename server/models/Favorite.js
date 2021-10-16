@@ -1,10 +1,10 @@
-const { Schema } = require('mongoose');
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const favoriteSchema = mongoose.Schema({
    
-    userForm: {
-        type: Schema.Type.ObjectId,
+    userFrom: {
+        type: Schema.Types.ObjectId,
         ref: 'User'
     },
     movieId: {
@@ -16,7 +16,7 @@ const favoriteSchema = mongoose.Schema({
     moviePost: {
         type: String
     },
-    movieRunTime: {
+    movieRuntime: {
         type: String
     }
 },{ timestamps: true})
