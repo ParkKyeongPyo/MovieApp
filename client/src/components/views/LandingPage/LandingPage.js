@@ -59,7 +59,7 @@ function LandingPage() {
                 
                 <Row gutter={[16,16]}>
 
-                    {Movies && Movies.map((movie, index) => (
+                    {Movies && Movies.map((movie, index) => ( //() => ()는 무슨 문법이지?
                         <React.Fragment key={index}>
                             <GridCards 
                                 landingPage
